@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sueldos</title>
+    <link rel="stylesheet" href="../../css/estilosformularios.css">
+    <style>
+        header {
+            font-family: "Press Start 2P", "consolas", sans-serif; /* Define la fuente deseada */
+        }
+    </style>   
+</head>
+<body>
+    <header>
+    <h1>Calculadora de Promedio de Sueldos</h1>
+    </header>
+    <main>
+    <section class="container">
+    <form action="">
+        <label for="nombres">
+            <input type="text" id="nombres" placeholder="Nombres de los empleados (separados por comas)">
+         </label>
+         <label for="horas">
+            <input type="text" id="horas" placeholder="Horas trabajadas de los empleados (separadas por comas)">
+         </label>
+         <label for="pagoPorHora">
+            <input type="text" id="pagoPorHora" placeholder="Pago por hora de los empleados (separado por comas)">
+         </label>
+        <div class="botones">
+            <button type="button" class="boton draw-border" onClick="arr.calcularPromedio()">Aceptar</button>
+            <button type="reset" class="boton draw-border" >Limpiar</button>
+        </div>
+            <br>
+            <div id="resp">
+                Respuesta
+            </div>
+            </form>
+        </section>      
+    </main>
+    <footer>
+        <h6>Todos los derechos reservados - 4DA2.Software</h6>
+    </footer>
+    <script src="../../js/arreglos.js" ></script>
+</body>
+</html>
+

@@ -1,0 +1,133 @@
+body {
+  font-family: "Press Start 2P", "consolas", sans-serif;
+  color: white;
+  margin: 0;
+  overflow: hidden; /* Evita las barras de desplazamiento */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;  
+  background-image: url('/img/fondo.png'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*pie de pagina*/
+footer {
+position: absolute;
+bottom: 0;
+width: 100%;
+background-color: #ffffff;
+padding: 10px;
+text-align: center;
+}
+
+footer {
+  background-color: transparent; /*transparent para que el pie de pagina conserve el fondo de toda la pagina*/
+  padding: 10px;
+  text-align: center;
+  
+}
+footer h6 {
+  color: white;
+}
+/*estilo de boton*/
+.draw-border {
+  box-shadow: inset 0 0 0 4px white;
+  color: white;
+  -webkit-transition: color 0.25s 0.0833333333s;
+  transition: color 0.25s 0.0833333333s;
+  position: relative;
+  border-radius: 10px;
+  
+}
+.draw-border::before, .draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 10px;
+}
+.draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+.draw-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+.draw-border:hover {
+  color: rgb(116, 238, 116);
+  border-radius: 10px;
+}
+.draw-border:hover::before, .draw-border:hover::after {
+  border-color: rgb(116, 238, 116);
+  border-radius: 10px;
+  -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+.draw-border:hover::before {
+  -webkit-transition-delay: 0s, 0s, 0.25s;
+          transition-delay: 0s, 0s, 0.25s;
+          border-radius: 10px;
+}
+.draw-border:hover::after {
+  -webkit-transition-delay: 0s, 0.25s, 0s;
+          transition-delay: 0s, 0.25s, 0s;
+          border-radius: 10px;
+}
+
+.boton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 1.1rem "Press Start 2P", "consolas", sans-serif;
+  padding: 0.5em 1em;
+  letter-spacing: 0.05rem;
+  border-radius: 10px;
+}
+.boton:focus {
+  outline: 2px dotted #55d7dc;
+  border-radius: 10px;
+}
+
+/* estilos para los formularios */
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+}
+
+#resp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 130%;
+  margin: 0 auto;
+  color:#fff;
+  font-weight: 900;
+  background-color: rgb(72, 202, 72);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 5px 10px rgba(12, 2, 2, 0.5);
+}
+.botones{
+  display: flex;
+  justify-content:center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
